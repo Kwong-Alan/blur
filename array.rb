@@ -1,12 +1,16 @@
-class blur
+class Image
 
-  def initialize(Name)
-    @Name = []
-
-    row_one = [1,1,1,1]
-    row_two = [0,1,0,1]
-    row_three = row_one.join(row_two)
-    @Name << row_three
+  def initialize
+   @image = Image.new([
+  [0, 0, 0, 0],
+  [0, 1, 0, 0],
+  [0, 0, 0, 1],
+  [0, 0, 0, 0],
+])
+   image.output_image
   end
 
+  def output_image
+      puts @image
+    end
 end
